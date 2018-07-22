@@ -17,7 +17,7 @@ using namespace std;
 
 void usage(int argc, char* argv[]){
   cout << "Usage: " << argv[0] << " [image-list]" << endl;
-  cout << "Output: A list of images (one per line) that aren't white" << endl;
+  cout << "Output: A list of images (one per line) that aren't blank" << endl;
 }
 
 bool is_whitepage(char* filename){
@@ -57,7 +57,7 @@ bool is_whitepage(char* filename){
   if (blobs_ratio < 1E-6) {
     is_whitepage = true;
     if(DEBUG)
-      cout << "White page!" << endl;
+      cout << "This page is blank." << endl;
   }
 
   return is_whitepage;
