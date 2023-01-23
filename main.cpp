@@ -31,9 +31,9 @@ bool is_whitepage(char* filename){
   params.filterByArea = true;
   params.minArea = 20;
   params.filterByCircularity = false;;
-  params.minCircularity = 0;
+  params.minCircularity = 1;
   params.filterByConvexity = false;
-  params.minConvexity = 0;
+  params.minConvexity = 1;
   params.filterByInertia = true;
   params.minInertiaRatio = 0.01;
  
@@ -78,7 +78,7 @@ int main(int argc, char* argv[]){
     }
   }
 
-  image = imread(argv[1], CV_LOAD_IMAGE_COLOR);
+  image = imread(argv[1]);
 
   if(!image.data){
     cerr << "No image data." << endl;

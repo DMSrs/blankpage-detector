@@ -1,5 +1,5 @@
-CFLAGS = `pkg-config --cflags opencv`
-LIBS = `pkg-config --libs opencv`
+CFLAGS = `pkg-config --cflags opencv4` -std=c++11
+LIBS = `pkg-config --libs opencv4`
 
 main:
 	clang++ -Wall $(CFLAGS) $(LIBS) main.cpp -o bpd.out
